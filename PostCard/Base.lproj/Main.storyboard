@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-t9-nJS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="247" y="184" width="80" height="80"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-Jh-bV8">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -44,39 +50,44 @@
                                     <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUc-sZ-6XS"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVf-va-bSb">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-xd-WpR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="72" width="319" height="134"/>
+                                    <rect key="frame" x="20" y="64" width="208" height="40"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-t9-nJS">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVf-va-bSb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="247" y="184" width="80" height="80"/>
+                                    <rect key="frame" x="20" y="108" width="202" height="111"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="8eX-t9-nJS"/>
                                 <exclude reference="5oQ-Jh-bV8"/>
                                 <exclude reference="9pG-Al-igw"/>
                                 <exclude reference="5qj-e0-8of"/>
+                                <exclude reference="xfk-xd-WpR"/>
                                 <exclude reference="nVf-va-bSb"/>
-                                <exclude reference="8eX-t9-nJS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="8eX-t9-nJS"/>
                                 <include reference="5oQ-Jh-bV8"/>
                                 <include reference="9pG-Al-igw"/>
                                 <include reference="5qj-e0-8of"/>
+                                <include reference="xfk-xd-WpR"/>
                                 <include reference="nVf-va-bSb"/>
-                                <include reference="8eX-t9-nJS"/>
                             </mask>
                         </variation>
                     </view>
@@ -85,6 +96,7 @@
                         <outlet property="enterNameTextField" destination="5oQ-Jh-bV8" id="Wxd-h1-jR9"/>
                         <outlet property="mailButton" destination="5qj-e0-8of" id="WTy-Kl-gOF"/>
                         <outlet property="messageLabel" destination="nVf-va-bSb" id="RmT-gh-FaW"/>
+                        <outlet property="nameLabel" destination="xfk-xd-WpR" id="Vhj-RS-8dp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="SAK-c8-Fi5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SagradaFamilia" translatesAutoresizingMaskIntoConstraints="NO" id="SAK-c8-Fi5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
@@ -155,6 +167,6 @@
     </scenes>
     <resources>
         <image name="AlbertEinsteinStamp" width="1917" height="1344"/>
-        <image name="Image" width="205" height="245"/>
+        <image name="SagradaFamilia" width="205" height="245"/>
     </resources>
 </document>
